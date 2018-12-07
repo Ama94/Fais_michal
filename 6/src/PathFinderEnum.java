@@ -85,65 +85,77 @@ public enum PathFinderEnum implements PathFinderInterface {
     }
 
 
-    private void Traffic(int traffic){
+    private int Traffic(int traffic){
         //POLNOC
         if (traffic == 1){
             if(map[currentPosition.col][currentPosition.row + 1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
                 stack.push(currentPosition);
+                return 1;
             }
             if(map[currentPosition.col + 1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
                 stack.push(currentPosition);
+                return 2;
             }
-            if(map[currentPosition.col - 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
+            if(map[currentPosition.col - 1 ][currentPosition.row] != 0) {
+                currentPosition = new Position(currentPosition.col - 1 , currentPosition.row );
                 stack.push(currentPosition);
+                return 4;
             }
         }
         //WSCHOD
         if (traffic == 2){
             if(map[currentPosition.col + 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
+                currentPosition = new Position(currentPosition.col + 1, currentPosition.row );
                 stack.push(currentPosition);
+                return 2;
             }
             if(map[currentPosition.col][currentPosition.row - 1] != 0) {
-                currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
+                currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
                 stack.push(currentPosition);
+                return 3;
             }
             if(map[currentPosition.col][currentPosition.row + 1] != 0) {
-                currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
+                currentPosition = new Position(currentPosition.col , currentPosition.row + 1);
                 stack.push(currentPosition);
+                return 1;
             }
         }
         //POLODNIE
         if (traffic == 3){
             if(map[currentPosition.col][currentPosition.row -1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
+                currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
                 stack.push(currentPosition);
+                return 3;
             }
             if(map[currentPosition.col -1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
-                stack.push(currentPosition);
-            }
-            if(map[currentPosition.col + 1][currentPosition.row + 1] != 0) {
                 currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
                 stack.push(currentPosition);
+                return 4;
+            }
+            if(map[currentPosition.col ][currentPosition.row + 1] != 0) {
+                currentPosition = new Position(currentPosition.col , currentPosition.row + 1);
+                stack.push(currentPosition);
+                return 1;
             }
         }
         //ZACHOD
         if (traffic == 4){
-            if(map[currentPosition.col -1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row);
+            if(map[currentPosition.col - 1][currentPosition.row] != 0) {
+                currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
                 stack.push(currentPosition);
+                return 4;
             }
             if(map[currentPosition.col][currentPosition.row +1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
                 stack.push(currentPosition);
+                return 1;
             }
-            if(map[currentPosition.col][currentPosition.row -1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row -1);
+            if(map[currentPosition.col + 1][currentPosition.row ] != 0) {
+                currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
                 stack.push(currentPosition);
+                return 2;
             }
         }
     }
