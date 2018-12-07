@@ -1,6 +1,9 @@
 
 
 public interface PathFinderInterface {
+
+
+
     /**
      * Metoda ustawia mapÄ miasta.
      *
