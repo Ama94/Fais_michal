@@ -1,3 +1,28 @@
+LEFT_HAND_TRAFFIC {
+@Override
+protected double getPenaltyImpl(final Turn turn)
+        {
+        if (turn == Turn.LEFT)
+        return MEDIUM_PENALTY;
+        return HIGH_PENALTY;
+        }
+        },
+        RIGHT_HAND_TRAFFIC {
+@Override
+protected double getPenaltyImpl(final Turn turn)
+        {
+        if (turn == Turn.RIGHT)
+        return MEDIUM_PENALTY;
+        return HIGH_PENALTY;
+        }
+        };
+
+private enum Turn {
+    STRAIGHT,
+    LEFT,
+    RIGHT;
+}
+
 private class Graph {
     private class Vertex {
         public final Position pos;
