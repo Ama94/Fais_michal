@@ -67,7 +67,10 @@ public enum PathFinderEnum implements PathFinderInterface {
         currentPosition = new Position(begin);
         int[] vector = {1,0,1,-1};
         stack.push(currentPosition);
-
+        int temp = 1;
+        while(currentPosition != end){
+            temp = Traffic(temp);
+        }
 
 
 
@@ -88,7 +91,7 @@ public enum PathFinderEnum implements PathFinderInterface {
     private int Traffic(int traffic){
         //POLNOC
         if (traffic == 1){
-            if(map[currentPosition.col][currentPosition.row + 1] != 0) {
+            if(currentPosition.row > map[currentPosition.col].length && map[currentPosition.col][currentPosition.row + 1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
                 stack.push(currentPosition);
                 return 1;
