@@ -1,182 +1,323 @@
-import java.util.Objects;
-import java.util.Stack;
+import java.util.*;
+import java.util.function.Function;
 
 public enum PathFinderEnum implements PathFinderInterface {
 
-    LEFT_HAND_TRAFFIC,
-    RIGHT_HAND_TRAFFIC;
-    public int[][] map = null;
-    private Position currentPosition;
-    Stack<Position> stack = new Stack<Position>();
-    protected int len;
-    private class Position implements  PositionInterface {
-        private final int col;
-        private final int row;
-
-        Position( int col, int row ) {
-            this.col = col;
-            this.row = row;
-        }
-
-        Position( PositionInterface pi ) {
-            this.col = pi.getCol();
-            this.row = pi.getRow();
-        }
-
+    LEFT_HAND_TRAFFIC {
         @Override
-        public int getRow() {
-            return row;
+        protected double getPenaltyImpl(final Turn turn)
+        {
+            if (turn == Turn.LEFT)
+                return MEDIUM_PENALTY;
+            else
+                return HIGH_PENALTY;
         }
-
+    },
+    RIGHT_HAND_TRAFFIC {
         @Override
-        public int getCol() {
+        protected double getPenaltyImpl(final Turn turn)
+        {
+            if (turn == Turn.RIGHT)
+                return MEDIUM_PENALTY;
+            else
+                return HIGH_PENALTY;
+        }
+    };
+
+    private static Double apply(Graph.Edge e) {
+        return 1.;
+    }
+
+    private static Double apply2(Graph.Edge e) {
+        return 0.;
+    }
+
+    private static Double apply3(Graph.Edge e) {
+        return 0.;
+    }
+
+    private enum Turn {
+        STRAIGHT,
+        LEFT,
+        RIGHT;
+    }
+    private class Graph {
+        private class Vertex {
+            final Position pos;
+            final Collection<Edge> edges;
+            final Direction dir;
+            Vertex(final Position _pos, final Direction _dir)
+            {
+                pos = _pos;
+                dir = _dir;
+                edges = new ArrayList<Edge>();
+            }
+        }
+        private class Edge {
+            final Vertex to;
+            final double weight;
+            final Turn turn;
+            Edge(final Vertex _to, final double _weight, final Turn _turn)
+            {
+                to = _to;
+                weight = _weight;
+                turn = _turn;
+            }
+        }
+        private Map<Vertex, Collection<Edge>> graph
+                = new HashMap<Vertex, Collection<Edge>>();
+        private Map<Position, Map<Direction, Vertex>> verticesList
+                = new HashMap<Position, Map<Direction, Vertex>>();
+        void createVertices(final Position _pos)
+        {
+            Map<Direction, Vertex> list = verticesList.get(_pos);
+            if (list == null) {
+                list = new EnumMap<Direction, Vertex>(Direction.class);
+                verticesList.put(_pos, list);
+            }
+            for (final Direction direction : Direction.values()) {
+                list.put(direction, new Vertex(_pos, direction));
+            }
+        }
+        void createConnections(
+                final Position _from, final Position _to, final Direction _dir)
+        {
+            final Map<Direction, Vertex> vertices = verticesList.get(_from);
+            final Direction incoming = _dir.right().right();
+            final Vertex destination = verticesList.get(_to).get(incoming);
+            vertices.get(incoming).edges.add(
+                    new Edge(destination, _from.weight, Turn.STRAIGHT));
+            vertices.get(incoming.right())
+                    .edges.add(new Edge(destination, _from.weight, Turn.LEFT));
+            vertices.get(incoming.left())
+                    .edges.add(new Edge(destination, _from.weight, Turn.RIGHT));
+        }
+        public Map<Direction, Vertex> getVertices(final Position _pos)
+        {
+            return verticesList.get(_pos);
+        }
+        PositionInterface[] findPath(final Position _start,
+                                     final Position _finish,
+                                     final Function<Edge, Double> weight)
+        {
+            if (_start == null || _finish == null)
+                return null;
+            if (_start.equals(_finish))
+                return new PositionInterface[] {_start};
+            Vertex startingVertex = new Vertex(_start, null);
+            Map<Direction, Vertex> startingVertices = verticesList.get(_start);
+            for (Vertex v : startingVertices.values()) {
+                for (Edge e : v.edges) {
+                    if (e.turn != Turn.STRAIGHT)
+                        continue;
+                    startingVertex.edges.add(e);
+                }
+            }
+            final Map<Vertex, Double> dist = new HashMap<Vertex, Double>();
+            final Map<Vertex, Vertex> prev = new HashMap<Vertex, Vertex>();
+            final Map<Vertex, Vertex> next = new HashMap<Vertex, Vertex>();
+            final PriorityQueue<Vertex> queue
+                    = new PriorityQueue<>(
+                    Comparator.comparingDouble((Vertex lhs) -> dist.getOrDefault(lhs, Double.MAX_VALUE)));
+            dist.put(startingVertex, apply2(null));
+            prev.put(startingVertex, null);
+            queue.offer(startingVertex);
+            Vertex finishingVertex = new Vertex(null, null);
+            while (queue.size() > 0) {
+                final Vertex current = queue.poll();
+                if (current.pos.equals(_finish)) {
+                    if (dist.get(current)
+                            < dist.getOrDefault(finishingVertex, Double.MAX_VALUE))
+                        finishingVertex = current;
+                    continue;
+                }
+                for (Edge edge : current.edges) {
+                    final Vertex neighbour = edge.to;
+                    final double alt = dist.get(current) + weight.apply(edge)
+                            + ((current.edges.size() > 1) ? getPenalty(edge.turn)
+                            : apply2(null));
+                    final double neighbourDist
+                            = dist.getOrDefault(neighbour, Double.MAX_VALUE);
+                    if (alt < neighbourDist) {
+                        dist.put(neighbour, alt);
+                        prev.put(neighbour, current);
+                        next.put(current, neighbour);
+                        queue.offer(neighbour);
+                    }
+                }
+            }
+            Deque<Position> list = new LinkedList<Position>();
+            for (Vertex i = finishingVertex; i != null; i = prev.get(i)) {
+                list.addFirst(i.pos);
+            }
+            return list.toArray(new PositionInterface[0]);
+        }
+    }
+    private enum Direction {
+        NORTH {
+            @Override
+            public Direction right()
+            {
+                return EAST;
+            }
+            @Override
+            public Direction left()
+            {
+                return WEST;
+            }
+        },
+        EAST {
+            @Override
+            public Direction right()
+            {
+                return SOUTH;
+            }
+            @Override
+            public Direction left()
+            {
+                return NORTH;
+            }
+        },
+        SOUTH {
+            @Override
+            public Direction right()
+            {
+                return WEST;
+            }
+            @Override
+            public Direction left()
+            {
+                return EAST;
+            }
+        },
+        WEST {
+            @Override
+            public Direction right()
+            {
+                return NORTH;
+            }
+            @Override
+            public Direction left()
+            {
+                return SOUTH;
+            }
+        };
+        public abstract Direction right();
+        public abstract Direction left();
+    }
+    private class Position implements PositionInterface {
+        final int col;
+        final int row;
+        final int weight;
+        public Position(int _col, int _row, int _weight)
+        {
+            col = _col;
+            row = _row;
+            weight = _weight;
+        }
+        public Position(int _col, int _row)
+        {
+            this(_col, _row, 0);
+        }
+        public Position(PositionInterface _pi)
+        {
+            this(_pi.getCol(), _pi.getRow(), 0);
+        }
+        @Override
+        public int getCol()
+        {
             return col;
         }
-
-    /*@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        PMO_Test.Position position = (PMO_Test.Position) o;
-        return col == position.col &&
-                row == position.row;
-    }*/
-
         @Override
-        public int hashCode() {
+        public int getRow()
+        {
+            return row;
+        }
+        boolean isWall()
+        {
+            return weight <= 0;
+        }
+        @Override
+        public boolean equals(Object o)
+        {
+            if (this == o)
+                return true;
+            if (o == null || getClass() != o.getClass())
+                return false;
+            Position p = (Position)o;
+            if (col == p.col && row == p.row /*&& weight == p.weight*/)
+                return true;
+            return false;
+        }
+        @Override
+        public int hashCode()
+        {
+            // return Objects.hash(col, row, weight);
             return Objects.hash(col, row);
         }
         @Override
-        public String toString() {
-            return "Position{" +
-                    "col=" + col +
-                    ", row=" + row +
-                    '}';
+        public String toString()
+        {
+            return "(" + getCol() + "," + getRow() + ")";
+        }
+    }
+    private Graph graph;
+    private final static double HIGH_PENALTY = 1. / 64.;
+    private final static double MEDIUM_PENALTY = HIGH_PENALTY / 8.;
+    private final static double LOW_PENALTY = MEDIUM_PENALTY / 8.;
+    protected abstract double getPenaltyImpl(final Turn turn);
+    public double getPenalty(final Turn turn)
+    {
+        if (turn == Turn.STRAIGHT)
+            return LOW_PENALTY;
+        return getPenaltyImpl(turn);
+    }
+
+    public void setMap(int[][] _map)
+    {
+        int width = _map.length;
+        int height = _map[0].length;
+        Position[][] map = new Position[width][height];
+        graph = new Graph();
+        for (int column = 0; column < width; ++column) {
+            for (int row = 0; row < height; ++row) {
+                final Position current
+                        = new Position(column, row, _map[column][row]);
+                map[column][row] = current;
+                if (current.isWall())
+                    continue;
+                graph.createVertices(current);
+                Position neighbour;
+                if (column > 0
+                        && !(neighbour = map[column - 1][row]).isWall()) {
+                    graph.createConnections(current, neighbour, Direction.WEST);
+                    graph.createConnections(neighbour, current, Direction.EAST);
+                }
+                if (row > 0 && !(neighbour = map[column][row - 1]).isWall()) {
+                    graph.createConnections(
+                            current, neighbour, Direction.SOUTH);
+                    graph.createConnections(
+                            neighbour, current, Direction.NORTH);
+                }
+            }
         }
     }
 
-
-
-    @java.lang.Override
-    public void setMap(int[][] map) {
-        this.map = map;
+    public PositionInterface[] getShortestRoute(
+            PositionInterface begin, PositionInterface end)
+    {
+        return graph.findPath(
+                new Position(begin), new Position(end), PathFinderEnum::apply);
     }
 
-    @java.lang.Override
-    public PositionInterface[] getShortestRoute(PositionInterface begin, PositionInterface end) {
-        currentPosition = new Position(begin);
-        stack.push(currentPosition);
-        //int temp = 1;
-        len = 0;
-        Traffic(1, end);
-        PositionInterface[] result = new PositionInterface[len + 1];
-        while(len >= 0){
-            result[len--] = stack.pop();
-        }
-        return result;
-        //return new PositionInterface[0];
-    }
-
-    @java.lang.Override
     public PositionInterface[] getEasiestRoute(PositionInterface begin, PositionInterface end) {
-        return new PositionInterface[0];
-    }
+        return graph.findPath(
+                new Position(begin), new Position(end), PathFinderEnum::apply2);
+        }
 
-    @java.lang.Override
+    @Override
     public PositionInterface[] getFastestRoute(PositionInterface begin, PositionInterface end) {
-        return new PositionInterface[0];
+        return graph.findPath(
+                new Position(begin), new Position(end), PathFinderEnum::apply3);
     }
-
-
-    private int Traffic(int traffic, PositionInterface end){
-        if(currentPosition.getCol() == end.getCol() && currentPosition.getRow() == end.getRow())
-            return 0;
-        //POLNOC
-        if (traffic == 1){
-            if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row + 1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(1,end);
-
-            }
-            if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(2,end);
-            }
-            if(currentPosition.col - 1 >= 0 && map[currentPosition.col - 1 ][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col - 1 , currentPosition.row );
-                stack.push(currentPosition);
-                len++;
-                return Traffic(4,end);
-            }
-        }
-        //WSCHOD
-        if (traffic == 2){
-            if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col + 1, currentPosition.row );
-                stack.push(currentPosition);
-                len++;
-                return Traffic(2,end);
-            }
-            if(currentPosition.row - 1 >= 0 && map[currentPosition.col][currentPosition.row - 1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(3,end);
-            }
-            if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row + 1] != 0) {
-                currentPosition = new Position(currentPosition.col , currentPosition.row + 1);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(1,end);
-            }
-        }
-        //POLODNIE
-        if (traffic == 3){
-            if(currentPosition.row - 1 >= 0 && map[currentPosition.col][currentPosition.row -1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(3,end);
-            }
-            if(currentPosition.col - 1 >= 0 && map[currentPosition.col -1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(4,end);
-            }
-            if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col + 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col + 1 , currentPosition.row);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(2,end);
-            }
-        }
-        //ZACHOD
-        if (traffic == 4){
-            if(currentPosition.col - 1 >= 0&& map[currentPosition.col - 1][currentPosition.row] != 0) {
-                currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(4,end);
-            }
-            if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row +1] != 0) {
-                currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(1,end);
-            }
-            if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row ] != 0) {
-                currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
-                stack.push(currentPosition);
-                len++;
-                return Traffic(2,end);
-            }
-        }
-        return traffic;
-    }
-
 }
