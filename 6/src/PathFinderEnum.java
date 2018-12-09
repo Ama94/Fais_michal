@@ -8,7 +8,7 @@ public enum PathFinderEnum implements PathFinderInterface {
     public int[][] map = null;
     private Position currentPosition;
     Stack<Position> stack = new Stack<Position>();
-
+    protected int len;
     private class Position implements  PositionInterface {
         private final int col;
         private final int row;
@@ -65,19 +65,16 @@ public enum PathFinderEnum implements PathFinderInterface {
     @java.lang.Override
     public PositionInterface[] getShortestRoute(PositionInterface begin, PositionInterface end) {
         currentPosition = new Position(begin);
-        int[] vector = {1,0,1,-1};
         stack.push(currentPosition);
-        int temp = 1;
-        int i = 0;
-        while(currentPosition.getCol() != end.getCol() || currentPosition.getRow() != end.getRow()){
-            temp = Traffic(temp);
-            i++;
-        }
-        PositionInterface[] result = new PositionInterface[i + 1];
-        while(i >= 0){
-            result[i--] = stack.pop();
+        //int temp = 1;
+        len = 0;
+        Traffic(1, end);
+        PositionInterface[] result = new PositionInterface[len + 1];
+        while(len >= 0){
+            result[len--] = stack.pop();
         }
         return result;
+        //return new PositionInterface[0];
     }
 
     @java.lang.Override
@@ -91,23 +88,29 @@ public enum PathFinderEnum implements PathFinderInterface {
     }
 
 
-    private int Traffic(int traffic){
+    private int Traffic(int traffic, PositionInterface end){
+        if(currentPosition.getCol() == end.getCol() && currentPosition.getRow() == end.getRow())
+            return 0;
         //POLNOC
         if (traffic == 1){
             if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row + 1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
                 stack.push(currentPosition);
-                return 1;
+                len++;
+                return Traffic(1,end);
+
             }
             if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
                 stack.push(currentPosition);
-                return 2;
+                len++;
+                return Traffic(2,end);
             }
             if(currentPosition.col - 1 >= 0 && map[currentPosition.col - 1 ][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col - 1 , currentPosition.row );
                 stack.push(currentPosition);
-                return 4;
+                len++;
+                return Traffic(4,end);
             }
         }
         //WSCHOD
@@ -115,17 +118,20 @@ public enum PathFinderEnum implements PathFinderInterface {
             if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col + 1, currentPosition.row );
                 stack.push(currentPosition);
-                return 2;
+                len++;
+                return Traffic(2,end);
             }
             if(currentPosition.row - 1 >= 0 && map[currentPosition.col][currentPosition.row - 1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
                 stack.push(currentPosition);
-                return 3;
+                len++;
+                return Traffic(3,end);
             }
             if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row + 1] != 0) {
                 currentPosition = new Position(currentPosition.col , currentPosition.row + 1);
                 stack.push(currentPosition);
-                return 1;
+                len++;
+                return Traffic(1,end);
             }
         }
         //POLODNIE
@@ -133,17 +139,20 @@ public enum PathFinderEnum implements PathFinderInterface {
             if(currentPosition.row - 1 >= 0 && map[currentPosition.col][currentPosition.row -1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row - 1);
                 stack.push(currentPosition);
-                return 3;
+                len++;
+                return Traffic(3,end);
             }
             if(currentPosition.col - 1 >= 0 && map[currentPosition.col -1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
                 stack.push(currentPosition);
-                return 4;
+                len++;
+                return Traffic(4,end);
             }
             if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col + 1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col + 1 , currentPosition.row);
                 stack.push(currentPosition);
-                return 2;
+                len++;
+                return Traffic(2,end);
             }
         }
         //ZACHOD
@@ -151,17 +160,20 @@ public enum PathFinderEnum implements PathFinderInterface {
             if(currentPosition.col - 1 >= 0&& map[currentPosition.col - 1][currentPosition.row] != 0) {
                 currentPosition = new Position(currentPosition.col - 1, currentPosition.row);
                 stack.push(currentPosition);
-                return 4;
+                len++;
+                return Traffic(4,end);
             }
             if(currentPosition.row + 1 <= map[currentPosition.col].length && map[currentPosition.col][currentPosition.row +1] != 0) {
                 currentPosition = new Position(currentPosition.col, currentPosition.row + 1);
                 stack.push(currentPosition);
-                return 1;
+                len++;
+                return Traffic(1,end);
             }
             if(currentPosition.col + 1 <= map.length && map[currentPosition.col + 1][currentPosition.row ] != 0) {
                 currentPosition = new Position(currentPosition.col + 1, currentPosition.row);
                 stack.push(currentPosition);
-                return 2;
+                len++;
+                return Traffic(2,end);
             }
         }
         return traffic;

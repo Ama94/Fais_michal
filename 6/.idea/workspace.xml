@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bafb0d4f-115a-441b-99a3-bca44705aa83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PMO_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PMO_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/6/PathFinderEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/6/PathFinderEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PathFinderEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PathFinderEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathFinderEnum2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../7/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../7/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../7/7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../7/7.iml" afterDir="false" />
@@ -79,22 +77,22 @@
     <session id="2065733511">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="251" />
+          <entry key="java" value="423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="251" />
+          <entry key="JAVA" value="423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -119,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PathFinderEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PMO_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4743">
-              <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+            <state relative-caret-position="227">
+              <caret line="276" selection-start-line="276" selection-end-line="276" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3292#3293#0" expanded="true" />
@@ -152,6 +150,15 @@
                 <element signature="e#3371#3372#0" expanded="true" />
                 <element signature="e#3407#3408#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -226,7 +233,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544351699066" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544354529954" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../7" />
   </component>
   <component name="RunDashboard">
@@ -241,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PMO_Test">
+  <component name="RunManager" selected="JUnit.PMO_Test.simplestS">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="6" />
@@ -260,6 +267,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PMO_Test.simplestE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="6" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PMO_Test" />
+      <option name="METHOD_NAME" value="simplestE(PathFinderInterface,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PMO_Test.simplestS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="6" />
       <option name="PACKAGE_NAME" value="" />
@@ -274,11 +291,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.PMO_Test" />
       <item itemvalue="JUnit.PMO_Test.simplestS" />
+      <item itemvalue="JUnit.PMO_Test.simplestE" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PMO_Test" />
         <item itemvalue="JUnit.PMO_Test.simplestS" />
+        <item itemvalue="JUnit.PMO_Test.simplestE" />
+        <item itemvalue="JUnit.PMO_Test" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -297,35 +316,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 27m 31s.xml">
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 14m 06s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 14m 11s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 14m 54s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 15m 44s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 16m 02s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestE - 2018.12.09 at 12h 17m 10s.xml">
+      <configuration name="PMO_Test.simplestE" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 12h 18m 44s.xml">
       <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 27m 34s.xml">
+    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 12h 20m 47s.xml">
       <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 29m 09s.xml">
+    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 12h 21m 52s.xml">
       <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 29m 12s.xml">
+    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 12h 22m 11s.xml">
       <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 29m 29s.xml">
-      <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 30m 20s.xml">
-      <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 30m 42s.xml">
-      <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 31m 22s.xml">
-      <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test_simplestS - 2018.12.09 at 11h 32m 22s.xml">
-      <configuration name="PMO_Test.simplestS" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PMO_Test - 2018.12.09 at 11h 35m 04s.xml">
-      <configuration name="PMO_Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -342,7 +361,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39716312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -362,6 +381,21 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PMO_Test.java</url>
+          <line>309</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java" />
@@ -437,20 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PMO_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4743">
-          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3292#3293#0" expanded="true" />
-            <element signature="e#3332#3333#0" expanded="true" />
-            <element signature="e#3371#3372#0" expanded="true" />
-            <element signature="e#3407#3408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/source.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -472,12 +492,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PathFinderEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="99" column="24" lean-forward="true" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PMO_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="276" selection-start-line="276" selection-end-line="276" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3292#3293#0" expanded="true" />
+            <element signature="e#3332#3333#0" expanded="true" />
+            <element signature="e#3371#3372#0" expanded="true" />
+            <element signature="e#3407#3408#0" expanded="true" />
           </folding>
         </state>
       </provider>
