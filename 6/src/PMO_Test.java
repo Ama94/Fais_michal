@@ -334,7 +334,7 @@ public class PMO_Test {
         add("*111*3************");
         add("*S*222************");
         add("******************");
-
+        /////0123456789
         prepare();
 
         List<Position> result =
