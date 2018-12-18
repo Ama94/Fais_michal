@@ -267,7 +267,7 @@ class GeometricShape implements GeometricShapeInterface {
     public Set<Point> getSetOfPoints() {
         //
         // inicjacja kolekcji
-        Set<Point> set_of_points = new TreeSet<Point>();
+        Set<Point> set_of_points = new HashSet<>();
         //
         // Sprawdzenie, czy lista punktow ma zawartosc
         if(this.points.size() == 0) return set_of_points;
@@ -316,7 +316,7 @@ class GeometricShape implements GeometricShapeInterface {
     public Optional<Point> getByPosition(List<Integer> positions) throws WrongNumberOfDimensionsException {
         //
         // sprawdzenie poprawnosci argumentu
-        if(positions.size() != this.points_dimensions)
+        if(positions.size() > 3)
             throw new WrongNumberOfDimensionsException( points_dimensions, positions.size() );
         //
         // tworzenie nowego punktu na podstawie podanych wspolrzednych
@@ -328,14 +328,14 @@ class GeometricShape implements GeometricShapeInterface {
         }
         //
         // Przeszukanie tablicy points za punktem point_to_find
-        for(int k = this.chronologic_points.size(); k > 0; k--) {
+        for(int k = this.chronologic_points.size() - 1 ; k >= 0; k--) {
             //
             // Sprawdzenie czy to szukany punkt i zwrócenie go zapakowanego w Optional.
             if( point_to_find.equals(this.chronologic_points.get(k)) ) return Optional.of( this.chronologic_points.get(k) );
         }
         //
         // Jesli tutaj doszlismy, to nie ma podanego punktu w tablicy points, zwracamy Optional z null.
-        return Optional.of( null );
+        return Optional.empty();
     }
 
     /**
@@ -356,7 +356,7 @@ class GeometricShape implements GeometricShapeInterface {
         try {
             //
             // nieskonczona petla, ale zakladam, ze punkt ma skonczona liczbe wymiarow ;]
-            for(int i=dimension;i>-1 ; i++) {
+            for(int i=dimension;i<=3 ; i++) {
                 //
                 // sprawdzenie wartosci dla tego wymiaru. Jesli nie istnieje - wywali blad.
                 p.getPosition(i);

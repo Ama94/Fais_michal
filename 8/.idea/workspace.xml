@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c419f635-56c0-42e7-b28e-6f954512917d" name="Default Changelist" comment="" />
+    <list default="true" id="c419f635-56c0-42e7-b28e-6f954512917d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/8/GeometricShape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/8/GeometricShape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeometricShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeometricShape.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,28 +45,54 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1672706479">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="101" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="101" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="java" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GeometricShape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6256">
-              <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+            <state relative-caret-position="284">
+              <caret line="337" column="31" selection-start-line="337" selection-start-column="31" selection-end-line="337" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12986#12993#0" expanded="true" />
+                <element signature="e#12771#12772#0" expanded="true" />
+                <element signature="e#12805#12806#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WrongNumberOfDimensionsException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
+                <element signature="e#553#554#0" expanded="true" />
                 <element signature="e#594#595#0" expanded="true" />
                 <element signature="e#756#757#0" expanded="true" />
                 <element signature="e#795#796#0" expanded="true" />
@@ -71,11 +102,86 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar!/org/junit/jupiter/api/AssertTimeout.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GeometricShapeInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar!/org/junit/platform/commons/util/ExceptionUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar!/org/junit/platform/commons/util/Preconditions.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Set.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="256" column="22" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="456" column="13" selection-start-line="456" selection-start-column="13" selection-end-line="456" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PMO_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="-5316">
+              <caret line="196" column="82" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="82" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#2325#2326#0" expanded="true" />
                 <element signature="e#2368#2369#0" expanded="true" />
                 <element signature="e#3130#3131#0" expanded="true" />
@@ -91,77 +197,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GeometricShapeInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WrongArgumentException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding>
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NoSuchPointException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#279#280#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../7/src/GeometricShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3757">
-              <caret line="226" selection-start-line="10" selection-start-column="4" selection-end-line="226" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -170,6 +205,15 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>optional</find>
+      <find>getSetTest</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -191,12 +235,14 @@
     <option name="width" value="1750" />
     <option name="height" value="970" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -213,14 +259,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544615203603" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545168369307" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -237,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PMO_Test">
     <configuration name="PMO_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="8" />
       <option name="PACKAGE_NAME" value="" />
@@ -246,9 +291,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PMO_Test.emptyOptional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PMO_Test" />
+      <option name="METHOD_NAME" value="emptyOptional" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PMO_Test.getSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PMO_Test" />
+      <option name="METHOD_NAME" value="getSetTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PMO_Test.okOptional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PMO_Test" />
+      <option name="METHOD_NAME" value="okOptional" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PMO_Test.okOptionalMultiple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="8" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PMO_Test" />
+      <option name="METHOD_NAME" value="okOptionalMultiple" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.PMO_Test" />
+      <item itemvalue="JUnit.PMO_Test.getSetTest" />
+      <item itemvalue="JUnit.PMO_Test.okOptionalMultiple" />
+      <item itemvalue="JUnit.PMO_Test.emptyOptional" />
+      <item itemvalue="JUnit.PMO_Test.okOptional" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PMO_Test" />
+        <item itemvalue="JUnit.PMO_Test.emptyOptional" />
+        <item itemvalue="JUnit.PMO_Test.okOptionalMultiple" />
+        <item itemvalue="JUnit.PMO_Test.okOptional" />
+        <item itemvalue="JUnit.PMO_Test.getSetTest" />
       </list>
     </recent_temporary>
   </component>
@@ -266,24 +362,51 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PMO_Test - 2018.12.12 at 12h 46m 25s.xml">
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 14m 34s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 15m 03s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 15m 56s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 17m 04s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_okOptional - 2018.12.18 at 22h 17m 48s.xml">
+      <configuration name="PMO_Test.okOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_okOptionalMultiple - 2018.12.18 at 22h 17m 53s.xml">
+      <configuration name="PMO_Test.okOptionalMultiple" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test - 2018.12.18 at 22h 18m 02s.xml">
       <configuration name="PMO_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 20m 08s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 25m 30s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PMO_Test_emptyOptional - 2018.12.18 at 22h 25m 39s.xml">
+      <configuration name="PMO_Test.emptyOptional" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536913" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25704697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,6 +414,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -304,49 +428,32 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GeometricShape.java</url>
+          <line>318</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GeometricShape.java</url>
+          <line>325</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PMO_Test.java</url>
+          <line>197</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../7/src/GeometricShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="226" selection-start-line="10" selection-start-column="4" selection-end-line="226" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/GeometricShape (1).java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="368" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeometricShapeInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GeometricShape (1).java" />
     <entry file="file://$PROJECT_DIR$/src/NoSuchPointException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -373,22 +480,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeometricShape.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar!/org/junit/jupiter/api/Assertions.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6256">
-          <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+        <state relative-caret-position="149">
+          <caret line="461" selection-start-line="461" selection-end-line="461" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar!/org/junit/jupiter/api/AssertThrows.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../7/src/GeometricShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12986#12993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar!/org/junit/jupiter/api/function/Executable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar!/org/junit/platform/commons/util/ExceptionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="456" column="13" selection-start-line="456" selection-start-column="13" selection-end-line="456" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.3.2/junit-jupiter-api-5.3.2.jar!/org/junit/jupiter/api/AssertTimeout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.2/junit-platform-commons-1.3.2.jar!/org/junit/platform/commons/util/Preconditions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="256" column="22" selection-start-line="256" selection-start-column="22" selection-end-line="256" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WrongNumberOfDimensionsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GeometricShapeInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="139" column="27" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PMO_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-5316">
+          <caret line="196" column="82" selection-start-line="196" selection-start-column="82" selection-end-line="196" selection-end-column="82" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#2325#2326#0" expanded="true" />
             <element signature="e#2368#2369#0" expanded="true" />
             <element signature="e#3130#3131#0" expanded="true" />
@@ -403,14 +611,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WrongNumberOfDimensionsException.java">
+    <entry file="file://$PROJECT_DIR$/src/GeometricShape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="284">
+          <caret line="337" column="31" selection-start-line="337" selection-start-column="31" selection-end-line="337" selection-end-column="31" />
           <folding>
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#12771#12772#0" expanded="true" />
+            <element signature="e#12805#12806#0" expanded="true" />
           </folding>
         </state>
       </provider>
